@@ -1,0 +1,414 @@
+* {
+	margin: 0;
+}
+
+body {
+	font-family: 微軟正黑體;
+}
+
+/* --------------- header */
+
+#header {
+	width: 100%;
+	height: 60px;
+	background: white;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+/* header 裡面的全部 a */
+#header a {
+	color: #333;
+	display: block;
+	text-decoration: none;
+}
+/* ---------- */
+
+#header .menu {
+	font-size: 18px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	/* icon 置中 */
+	text-align: center;
+	line-height: 40px;
+	/*  */
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 15px;
+}
+
+.menu a:hover {
+	background-color: #ddd;
+	border-radius: 50%;
+}
+
+#header img {
+	height: 20px;
+	position: absolute;
+	left: 70px;
+	top: 20px;
+}
+/* ---------- */
+
+#search {
+	width: 650px;
+	height: 40px;
+	position: relative;
+	top: 10px;
+	margin: auto;
+}
+
+#search #search-left input {
+	font-size: 16px;
+	width: 530px;
+	height: 40px;
+	border-radius: 20px 0 0 20px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	padding-left: 15px;
+	/*  */
+	float: left;
+}
+
+#search #search-left input:focus {
+	outline: none;
+	border: 1px solid rgb(0, 80, 200);
+}
+
+#search #search-center {
+	background-color: #f8f8f8;
+	border: 1px solid #ccc;
+	border-left: none;
+	width: 60px;
+	height: 40px;
+	border-radius: 0 20px 20px 0;
+	box-sizing: border-box;
+	float: left;
+	/* icon 位置 */
+	text-align: center;
+	line-height: 40px;
+}
+
+#search #search-right {
+	background-color: #eee;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	float: right;
+	/* icon 位置 */
+	text-align: center;
+	line-height: 40px;
+}
+
+#search #search-center a {
+	border-radius: 0 20px 20px 0;
+}
+#search #search-right a {
+	border-radius: 50%;
+}
+
+#search a:hover {
+	background-color: #ddd;
+}
+/* ---------- */
+
+#header .dot3 {
+	font-size: 20px;
+	position: absolute;
+	width: 20px;
+	right: 130px;
+	bottom: 20px;
+	/* icon 位置 */
+	text-align: center;
+	line-height: 20px;
+}
+#header .login {
+	border: 1px solid #ccc;
+	color: rgb(0, 80, 200);
+	font-size: 15px;
+	width: 80px;
+	height: 30px;
+	border-radius: 15px;
+	position: absolute;
+	right: 30px;
+	bottom: 15px;
+	/* icon 位置 */
+	text-align: center;
+	line-height: 30px;
+	/*  */
+	word-spacing: 5px;
+}
+
+.login:hover {
+	background-color: lightblue;
+}
+
+/* --------------- sidebar */
+
+#sidebar {
+	/* view port height */
+	height: calc(100vh - 60px);
+	width: 240px;
+	background: white;
+	position: fixed;
+	left: 0;
+	top: 60px;
+	/*  */
+	overflow: hidden;
+}
+
+#sidebar:hover {
+	overflow-y: auto;
+}
+
+#sidebar::-webkit-scrollbar {
+	width: 10px;
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+	background-color: #999;
+	border: 1px solid white;
+	border-radius: 8px;
+	margin: 2px;
+}
+
+/* sidebar 裡面的全部 a */
+#sidebar > a {
+	color: #333;
+	display: block;
+	text-decoration: none;
+	/* a 轉型 block 盒子尺寸 */
+	width: 210px;
+	height: 40px;
+	margin-left: 10px;
+	border-radius: 10px;
+	/* icon 內文 位置 */
+	line-height: 40px;
+	/* 給內容的定位點 */
+	position: relative;
+}
+
+#sidebar a i {
+	margin-left: 15px;
+	font-size: 17px;
+}
+
+#sidebar a span {
+	font-size: 14px;
+	position: absolute;
+	left: 60px;
+}
+
+#sidebar a:hover {
+	background-color: #eee;
+}
+
+#sidebar .first {
+	margin-top: 10px;
+}
+
+#sidebar hr {
+	border: 1px solid #eee;
+	margin: 10px 10px 8px 0;
+}
+
+#sidebar p {
+	font-size: 14px;
+	width: 180px;
+	margin: auto;
+	padding: 8px 30px;
+	line-height: 1.4;
+}
+
+#sidebar .login {
+	border: 1px solid #ccc;
+	color: rgb(0, 80, 200);
+	font-size: 15px;
+	width: 80px;
+	height: 30px;
+	border-radius: 15px;
+	/* icon 位置 */
+	text-align: center;
+	line-height: 30px;
+	/*  */
+	word-spacing: 5px;
+	/*  */
+	margin: 5px 0 20px 30px;
+}
+
+/* 修正 sidebar 裡的 i 的統一設定 */
+#sidebar .login i {
+	margin-left: 0;
+	font-size: 15px;
+}
+
+#sidebar .login:hover {
+	background-color: lightblue;
+}
+
+#sidebar h3 {
+	font-size: 16px;
+	margin-left: 22px;
+	padding: 10px 0;
+}
+
+#sidebar .red-icon i {
+	color: red;
+}
+
+#sidebar p a {
+	color: #333;
+	text-decoration: none;
+	font-size: 13px;
+	margin-right: 3px;
+}
+
+#sidebar .footer {
+	font-size: 13px;
+	color: #999;
+	margin-bottom: 10px;
+}
+
+/* --------------- content */
+
+#content {
+	/* background: lightgreen; */
+	width: calc(100% - 240px);
+	margin-top: 60px;
+	margin-left: 240px;
+}
+
+#content-top {
+	background-color: white;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	left: 240px;
+	top: 60px;
+	/*  */
+	padding-left: 30px;
+}
+
+#content-top li {
+	background-color: #eee;
+	display: inline-block;
+	border-radius: 8px;
+	font-size: 14px;
+	margin: 15px 10px 15px 0;
+}
+
+#content-top a {
+	text-decoration: none;
+	color: black;
+	display: block;
+	padding: 8px 10px;
+	border-radius: 8px;
+}
+
+#content-top a:hover {
+	background-color: #ddd;
+}
+
+/* 影片區 */
+
+#content-video {
+	width: 100%;
+	margin-top: 120px;
+	padding: 20px 30px 20px 30px;
+}
+
+#content-video .box {
+	/* background-color: palevioletred; */
+	width: 365px;
+	height: 312px;
+	/*  */
+	display: inline-block;
+	margin-bottom: 35px;
+	margin-right: 15px;
+}
+
+#content-video .box a {
+	display: block;
+	text-decoration: none;
+	color: #333;
+}
+
+#content-video .vedio {
+	/* background-color: lightblue; */
+	width: 365px;
+	height: 200px;
+	margin-bottom: 12px;
+}
+
+#content-video .vedio img {
+	width: 365px;
+	height: 200px;
+	border-radius: 12px;
+}
+
+#content-video .vedio:hover img {
+	border-radius: 0;
+	transition: 0.5s;
+}
+
+#content-video .pic {
+	/* background-color: lightsalmon; */
+	width: 47px;
+	height: 100px;
+	float: left;
+}
+
+#content-video .pic img {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+
+#content-video .dot {
+	/* background-color: aqua; */
+	width: 28px;
+	height: 100px;
+	font-size: 20px;
+	float: right;
+}
+
+#content-video i {
+	float: right;
+	margin-right: 8px;
+	display: none;
+}
+
+#content-video .info:hover i {
+	display: inline;
+}
+
+#content-video .title {
+	/* background-color: darkgray; */
+	width: 290px;
+	height: 50px;
+	overflow: hidden;
+
+	font-size: 16px;
+	line-height: 1.5;
+	color: black;
+
+	/* 多行省略號 */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+#content-video .footer {
+	/* background-color: rgb(162, 138, 186); */
+	width: 290px;
+	height: 50px;
+	overflow: hidden;
+
+	font-size: 14px;
+	line-height: 1.5;
+	color: #777;
+}
